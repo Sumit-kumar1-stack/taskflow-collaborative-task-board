@@ -1,0 +1,27 @@
+{
+  "name": "taskflow-assessment",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*"
+  ],
+  "scripts": {
+    "dev": "concurrently -n API,WEB -c auto \"npm run dev -w @taskflow/api\" \"npm run dev -w @taskflow/web\"",
+    "build": "npm run build -w @taskflow/api && npm run build -w @taskflow/web",
+    "db:up": "docker compose up -d postgres",
+    "db:down": "docker compose down",
+    "db:generate": "npm run prisma:generate -w @taskflow/api",
+    "db:migrate": "npm run prisma:migrate -w @taskflow/api",
+    "db:seed": "npm run prisma:seed -w @taskflow/api",
+    "setup": "npm run db:generate && npm run db:migrate && npm run db:seed",
+    "pretest": "npm run build -w @taskflow/api",
+    "test": "node --test --test-concurrency=1 scripts/hardening.test.mjs",
+    "smoke": "node scripts/smoke.mjs"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
