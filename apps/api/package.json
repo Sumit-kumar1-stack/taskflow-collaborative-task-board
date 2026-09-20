@@ -4,12 +4,13 @@
   "version": "0.1.0",
   "scripts": {
     "dev": "nest start --watch",
-    "build": "nest build",
+    "build": "prisma generate && nest build",
     "start": "node dist/src/main.js",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate deploy",
     "prisma:seed": "tsx prisma/seed.ts",
-    "prisma:migrate:dev": "prisma migrate dev"
+    "prisma:migrate:dev": "prisma migrate dev",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@nestjs/common": "^11.0.0",
