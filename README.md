@@ -1,5 +1,8 @@
 # TaskFlow — Collaborative Task Management Platform
 
+![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white) ![NestJS](https://img.shields.io/badge/NestJS-E0234E?logo=nestjs&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-4169E1?logo=postgresql&logoColor=white) ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white) ![Socket.IO](https://img.shields.io/badge/Socket.IO-010101?logo=socketdotio&logoColor=white)
+
+
 TaskFlow is a full-stack collaborative task-management application built for the **HyScaler AI Solutions Engineer Intern/Apprentice (Tech) coding assessment**.
 
 It allows users to create projects, collaborate through project-scoped roles, create and assign tasks, manage work across a board, comment on tasks, review activity history, view personal workload and dashboard metrics, and receive authenticated real-time updates through Socket.IO.
